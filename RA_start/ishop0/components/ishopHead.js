@@ -2,13 +2,17 @@
 
 import './ishopHead.css';
 
-class IShopHead extends React.Component {
+class Shop extends React.Component {
 
   render() {
     return (
-      <div className='IShopHead'>
-        <span className='IShopHead_Text'>
+      <div className='Shop'>
+        <span className='Shop_Text'>
           {this.props.question}
+        </span>
+    
+        <span className='Shop_Address'>
+          {this.props.address}
         </span>
       </div>
     );
@@ -16,4 +20,4 @@ class IShopHead extends React.Component {
 
 }
 
-export default IShopHead;
+export default Shop;

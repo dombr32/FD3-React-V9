@@ -1,15 +1,24 @@
-﻿.IShopHead
+﻿.Shop
 {
   border: double #7B68EE 2px;
-  background-color: lightgrey;
+  background-color: #F0FFF0;
   /* display: inline-block; */
   padding: 10px;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
-.IShopHead_Text
+.Shop_Text
 {
   color: #7B68EE;
   font-size: 55px;
+  display: block;
+  text-align: center;
+}
+
+.Shop_Address
+{
+  color: #4682B4;
+  display: block;
+  text-align: right;
 }

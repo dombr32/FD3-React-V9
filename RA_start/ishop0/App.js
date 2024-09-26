@@ -1,9 +1,9 @@
 ﻿import React from 'react';
 import ReactDOM from 'react-dom';
 
-import IShopHead from './components/ishopHead';
+import Shop from './components/ishopHead';
 
 ReactDOM.render(
-  <IShopHead question="Интернет-магазин с доставкой по всей Беларуси" />, 
+  <Shop question="Интернет-магазин с доставкой по всей Беларуси" address="г. Минск, ул. Столичная 19"/>, 
   document.getElementById('container') 
 );
