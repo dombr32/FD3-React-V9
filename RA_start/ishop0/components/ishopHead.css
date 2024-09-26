@@ -1,0 +1,15 @@
+﻿.IShopHead
+{
+  border: double #7B68EE 2px;
+  background-color: lightgrey;
+  /* display: inline-block; */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.IShopHead_Text
+{
+  color: #7B68EE;
+  font-size: 55px;
+}
