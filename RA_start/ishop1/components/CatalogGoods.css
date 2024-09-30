@@ -1,0 +1,22 @@
+.CatalogGoods img {
+    height: 200px;
+    display: block;
+}
+
+.CatalogGoods .Type {
+    font-size: 24px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+
+.CatalogGoods .Price {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.CatalogGoods .Amount {
+    display: block;
+    text-align: center;
+}
