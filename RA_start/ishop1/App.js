@@ -8,7 +8,7 @@ import CatalogBlock from './components/CatalogBlock';
 
 // const catalogText='Каталог товаров';
 
-import catalogArr from './catalog.json';
+// import catalogArr from './catalog.json';
 
 ReactDOM.render(
   <div>
@@ -16,7 +16,7 @@ ReactDOM.render(
 
     <CatalogBlock 
       // description={catalogText}
-      catalog={catalogArr}
+      // catalog={catalogArr}
     />
   </div>,
   
@@ -24,11 +24,3 @@ ReactDOM.render(
   document.getElementById('container') 
 );
 
-// ReactDOM.render(
-// <CatalogBlock 
-//     description={catalogText}
-//     catalog={catalogArr}
-//   />,
-
-//   document.getElementById('container') 
-// )
