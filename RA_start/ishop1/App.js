@@ -3,21 +3,16 @@ import ReactDOM from 'react-dom';
 
 import Shop from './components/ishopHead';
 
-import CatalogBlock from './components/CatalogBlock';
-
 
 // const catalogText='Каталог товаров';
 
 // import catalogArr from './catalog.json';
 
+
+
 ReactDOM.render(
   <div>
-    <Shop question="Интернет-магазин с доставкой по всей Беларуси" address="г. Минск, ул. Столичная 19"/>
-
-    <CatalogBlock 
-      // description={catalogText}
-      // catalog={catalogArr}
-    />
+    <Shop description="Интернет-магазин с доставкой по всей Беларуси" address="г. Минск, ул. Столичная 19" />
   </div>,
   
 
