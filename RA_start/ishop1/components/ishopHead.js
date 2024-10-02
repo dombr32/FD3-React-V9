@@ -2,11 +2,12 @@
 
 import './ishopHead.css';
 import CatalogBlock from './CatalogBlock';
-// const catalogBlock = <CatalogBlock/>
+// import catalogArr from '../catalog.json';
 
 class Shop extends React.Component {
 
   render() {
+
     return (
       <div>
         <div className='Shop_Head'>
@@ -19,7 +20,7 @@ class Shop extends React.Component {
           </span>
         </div>
 
-        < CatalogBlock />
+        <CatalogBlock catalog={this.props.catalog}/>
         
       </div>
     );
