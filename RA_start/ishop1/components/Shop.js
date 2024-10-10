@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 
-import './ishopHead.css';
+import './Shop.css';
 import CatalogBlock from './CatalogBlock';
 // import catalogArr from '../catalog.json';
 

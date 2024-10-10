@@ -1,0 +1,11 @@
+[
+    {"type": "Apple MacBook Air 13\" M1", "price": "3800 р","code": "1", "amount": "49",
+    "url":"https://cdn21vek.by/img/galleries/6268/620/macbookair13m12020256gbmgn63_apple_5fbe5881447ae.jpeg"},
+    {"type": "Apple MacBook Air 13\" M3", "price": "5700 р", "code":"2", "amount": "8",
+    "url":"https://cdn21vek.by/img/galleries/8984/74/macbookair13m3256gbmrxn3_apple_8984074_662a549dd0702.jpeg"},
+    {"type": "HP Laptop 17", "price":"3100 р", "code":"3", "amount":"74",
+    "url":"https://cdn21vek.by/img/galleries/7723/576/laptop174h3b3ea_hp_641c461553ea4.jpeg"},
+    {"type": " Lenovo V15", "price":"1200 р", "code":"4", "amount":"82",
+    "url":"https://cdn21vek.by/img/galleries/8915/962/v15g2ijl82qya00hin_lenovo_8915962_660ebc334dab1.jpeg"}
+    
+]
