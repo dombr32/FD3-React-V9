@@ -6,10 +6,11 @@ class Catalog extends React.Component {
 
     click = eo => {
         this.props.cbClicked( eo.currentTarget.getAttribute('code'));
+        eo.stoppropagation()
       };
     
       clickDel = eo => {
-        eo.stopPropagation();
+        
         this.props.cbClickedDel( eo.target.getAttribute('code'));
       }
 
@@ -38,7 +39,7 @@ class Catalog extends React.Component {
                         <span className='Type'>{this.props.type}</span>
                         <span className='Price'>Цена: <b>{this.props.price}</b></span>
                         <span className='Amount'>Осталось: {this.props.amount} шт.</span>
-                        <button onClick={this.clickDel} code={this.props.code}>delete</button>
+                        <button>delete</button>
                     </span>
                 </Fragment>
             )

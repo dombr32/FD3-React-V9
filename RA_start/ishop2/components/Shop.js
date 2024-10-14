@@ -20,8 +20,10 @@ class Shop extends React.Component {
   clickedDel = (i) =>{
     // код i равен порядковому номеру в json, отнимаем 1, учитывая, что массив начинается с 0
     if (confirm('вы хотите удалить товар?')) {
-      delete this.state.catalogCopyArr[i-1];
-      this.setState ({catalogCopyArr:this.state.catalogCopyArr})
+      let catalogCopy =  this.state.catalogCopyArr;
+      delete catalogCopy[i-1];
+      console.log(catalogCopy);
+      this.setState ( {catalogCopyArr : catalogCopy} );
     }
   }
 
