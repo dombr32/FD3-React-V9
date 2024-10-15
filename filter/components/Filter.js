@@ -7,46 +7,54 @@ class Filter extends React.Component {
 
 
   state = {
-    wordsCopyArr : this.props.words,
-    isSelected: "",
+    words : this.props.words,
+    filterWords: "",
+    isSelected: false,
     }
 
+
   filterChange = (eo) =>{
-    // this.setState ( {isSelected:eo.target.value} )
+    this.setState( {filterWords : eo.target.value}, this.wordsAfterFilter)
+  }
 
-    const filterWords=this.state.wordsCopyArr.map( v =>
-      { const i = this.state.wordsCopyArr.indexOf(v);
-          if (!v.includes(eo.target.value))
+  sortWords = (eo) => {
+    this.setState( {isSelected : eo.target.checked}, this.wordsAfterFilter)
+  }
 
-          // console.log(v);
-          delete this.state.wordsCopyArr[i];
-          console.log(this.state.wordsCopyArr)
-          this.setState ( {wordsCopyArr:this.state.wordsCopyArr} )
-          // console.log(this.state.wordsCopyArr)
-      }
-    );
+  // функция для сортировки массива
+  wordsAfterFilter = () => {
 
-    
-    // const filterWords = this.state.wordsCopyArr.filter(word => word !== eo.target.value);
+    let words = this.props.words;
+    if (this.state.filterWords)
+    words = words.filter ( v => v.includes(this.state.filterWords));
+    // console.log(words)
+    if (this.state.isSelected) {
+      if (words === this.props.words)
+        words = words.slice() //возвращаем новый массив
+        // console.log(words)}
+      words = words.sort()
+    }
+    this.setState({words})
+  }
 
-    // console.log(this.state.wordsCopyArr)
-    // this.setState ( {wordsCopyArr:filterWords} )
-    
+  //  функция для очистки массива
+  clearField = () => {
+    this.setState( {filterWords:"", isSelected:false, words:this.props.words} )
   }
 
 
   render() {
 
-    
-
     return (
+
+      
       <div>
         
-        <input type='radio'></input>
-        <input type="text" onChange={this.filterChange}></input>
-        <button>сброс</button>
+        <input type='checkbox' checked={this.state.isSelected} onChange={this.sortWords}></input>
+        <input type="text" value={this.state.filterWords} onChange={this.filterChange}></input>
+        <input type="button" value="сброс" onClick={this.clearField}></input>
         <br></br>
-        <textarea defaultValue={this.state.wordsCopyArr.join('\n')}></textarea>
+        <textarea value={this.state.words.join('\n')}></textarea>
         
       </div>
     );
