@@ -6,12 +6,12 @@ class Br2jsx extends React.Component {
 
   br = (text) => {
 
-    let textArr = text.split(/<.+?>/); //создаем массив, где элементом будет каждое отделльное слово (в регулярном выражении берем любой тег)
+    let textArr = text.split(/<br.*?>/); //создаем массив, где элементом будет каждое отделльное слово (в регулярном выражении берем тег br)
     let result=[]; //создаем массив для результата иттерации 
-
     for (let i in textArr) {
       if (i<textArr.length-1)
-      result.push(textArr[i], <br key="i"></br>) //складывае в массив слова уже с тегом <br>
+      
+      result.push(textArr[i], <br key={i}></br>) //складывае в массив слова уже с тегом <br>
       else result.push(textArr[i])
       // console.log(i)
     }
