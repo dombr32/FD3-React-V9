@@ -10,8 +10,8 @@ const Filter = () => {
   const [filterWords, setFilter] = useState("");
   const [isSelected, setSelect] = useState(false);
 
-const filterChange = useCallback((eo) => {
-  setFilter(eo.target.value)
+const filterChange = useCallback((filter) => {
+  setFilter (filter)
 }, [setFilter]);
 
 const wordsAfterFilter = useMemo(() => {
