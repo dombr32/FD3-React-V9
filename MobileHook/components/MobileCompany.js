@@ -75,7 +75,7 @@ const MobileCompany = () => {
 
   const clientsCode = clients.map( client =>
     <MobileClient key={client.id} info={client}  />
-  );
+  )
 
   console.log("MobileCompany render");
 

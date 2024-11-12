@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react';
 import './MobileClient.css';
 import {mobileEvents} from './events';
 
-const MobileClient = ( {info} ) =>  {
+const MobileClient = React.memo (( {info} ) =>  {
 
   const [isSelect, setSelect] = useState (true)
     
@@ -62,7 +62,7 @@ const MobileClient = ( {info} ) =>  {
       </div>
     );
 
-  }
+  })
 
 
 export default MobileClient;
