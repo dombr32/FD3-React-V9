@@ -23,13 +23,15 @@ const MobileCompany = () => {
 
 
   const deleteClickHandler = (id) => {
-    const deleteClient = clients.filter ( (client) => client.id !== id)
+    const clientsCopy = [...clients];
+    const deleteClient = clientsCopy.filter ( ({...client}) => client.id !== id)
     setClients (deleteClient)
   }
 
 
   const addClickHandler = (id, surname, firstname, fatherName, balance) => {
-    const editedClient = clients.map ( (client) => {
+    const clientsCopy = [...clients]
+    const editedClient = clientsCopy.map ( (client) => {
       if (client.id == id){
         return {...client, 
           surname, 
@@ -74,6 +76,8 @@ const MobileCompany = () => {
   const clientsCode = clients.map( client =>
     <MobileClient key={client.id} info={client}  />
   );
+
+  console.log("MobileCompany render");
 
   return (
     <div className='MobileCompany'>

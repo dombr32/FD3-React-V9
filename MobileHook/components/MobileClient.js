@@ -27,7 +27,8 @@ const MobileClient = ( {info} ) =>  {
   }
   
 
-
+    console.log("MobileClient id="+info.id+" render");
+    
     return (
       <div className='MobileClient'>
         <input type="text" defaultValue={info.surname} 
