@@ -15,7 +15,14 @@ const MobileClient = React.memo (( {info} ) =>  {
 
   const add = () => {
     setSelect(!isSelect)
-    mobileEvents.emit( "addClick", info.id, surnameRef.current.value, firstnameRef.current.value, fatherNameRef.current.value, balanceRef.current.value)
+    const clientInfo = {
+      id : info.id,
+      fam : surnameRef.current.value,
+      im : firstnameRef.current.value,
+      otch : fatherNameRef.current.value,
+      balance : balanceRef.current.value
+    }
+    mobileEvents.emit( "addClick", clientInfo)
   }
 
   const edit = () => {
@@ -31,13 +38,13 @@ const MobileClient = React.memo (( {info} ) =>  {
     
     return (
       <div className='MobileClient'>
-        <input type="text" defaultValue={info.surname} 
+        <input type="text" defaultValue={info.fam} 
         className='MobileClient-text' disabled={isSelect} ref={surnameRef}></input>
 
-        <input type="text" defaultValue={info.firstname} 
+        <input type="text" defaultValue={info.im} 
         className='MobileClient-text' disabled={isSelect} ref={firstnameRef}></input>
 
-        <input type="text" defaultValue={info.fatherName}
+        <input type="text" defaultValue={info.otch}
         className='MobileClient-text' disabled={isSelect} ref={fatherNameRef}></input>
 
 

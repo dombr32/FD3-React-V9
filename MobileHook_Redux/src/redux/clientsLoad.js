@@ -6,8 +6,9 @@ export async function clientsLoad(dispatch) {
       const response=await fetch("https://fe.it-academy.by/Examples/mobile_company.json");
       if ( response.ok ) {
         const data=await response.json();
+        const clients = data.clientsArr
         dispatch( updateLoadState({state:2,error:null}) );
-        dispatch( updateData(data) );
+        dispatch( updateData(clients) );
       }
       else {
         dispatch( updateLoadState({state:3,error:"HTTP error "+response.status}) );
