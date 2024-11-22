@@ -29,8 +29,8 @@ class Scales {
   
   class Product {
   
-    productName:string;
-    productCost:number;
+    private productName:string;
+    private productCost:number;
   
     constructor(name:string , cost:number) {
       this.productName=name;
